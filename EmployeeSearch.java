@@ -41,13 +41,12 @@ public class EmployeeSearch {
 			System.out.print("Enter eSalary: ");
 			double esalary=sc.nextDouble();
 			arr[i]= new Employee(no,ename,esalary);
-			System.out.print("Enter eNo: ");
-			System.out.println();
+			
 		}
 		System.out.print("Enter Employee number to search : ");
 		int searchid =sc.nextInt();
 		boolean found =false;
-		System.out.print("\n------Search Result-------");
+		System.out.println("\n------Search Result-------");
 		for(int i=0;i<n-1;i++){
 			if(arr[i].no==searchid){
 				System.out.print("Employee Found: ");
@@ -55,7 +54,7 @@ public class EmployeeSearch {
 				found=true;
 				break;
 			}
-			else
+			if(!found)
 				System.out.println("Not found");
 			}
 		}
